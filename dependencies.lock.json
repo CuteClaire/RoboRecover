@@ -1,0 +1,52 @@
+{
+  "RoboTwin": {
+    "url": "https://github.com/RoboTwin-Platform/RoboTwin.git",
+    "revision": "c3ddfa8b97d5519efa828b075999bd0006778e5e",
+    "historical_revision_verified": false
+  },
+  "X-VLA": {
+    "url": "https://github.com/2toinf/X-VLA.git",
+    "revision": "6bc2513f5f1cbec715cc668b414392a6cae5c671",
+    "historical_revision_verified": false
+  },
+  "lingbot-vla": {
+    "url": "https://github.com/Robbyant/lingbot-vla.git",
+    "revision": "4eb34b7693a0565c67433f8fac9c59a2e67eb60b",
+    "historical_revision_verified": false
+  },
+  "lerobot": {
+    "url": "https://github.com/huggingface/lerobot.git",
+    "revision": "536b9621b2d8b0193be71508140701a18f79c953",
+    "historical_revision_verified": false
+  },
+  "openpi": {
+    "url": "https://github.com/Physical-Intelligence/openpi.git",
+    "revision": "c23745b5ad24e98f66967ea795a07b2588ed6c79",
+    "historical_revision_verified": false
+  },
+  "unifolm-vla": {
+    "url": null,
+    "revision": null,
+    "historical_revision_verified": false
+  },
+  "LIBERO": {
+    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO.git",
+    "revision": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "historical_revision_verified": false
+  },
+  "Being-H": {
+    "url": "https://github.com/BeingBeyond/Being-H.git",
+    "revision": "594219eaa16097b86d460b3e1040cca0fc4e4b98",
+    "historical_revision_verified": false
+  },
+  "FastWAM": {
+    "url": "https://github.com/yuantianyuan01/FastWAM.git",
+    "revision": "45d8e1458921d83f8ad6cf9ce993d371208dabd0",
+    "historical_revision_verified": false
+  },
+  "cosmos-policy": {
+    "url": "https://github.com/NVlabs/cosmos-policy.git",
+    "revision": "18a2accadf4e7a3531e56754102af5a24d2316da",
+    "historical_revision_verified": false
+  }
+}

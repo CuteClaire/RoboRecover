@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# RoboRecover local artifacts (never commit weights or full scenario data)
+/data/
+/runs/
+/.roborecover-backup/
+*.safetensors
+*.ckpt

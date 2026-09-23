@@ -1,0 +1,18 @@
+# Basic experiment configuration (keep unchanged)
+policy_name: null
+task_name: null
+task_config: null
+ckpt_setting: null
+seed: null
+instruction_type: unseen
+
+# Add Parameters You Need
+train_config_name: pi05_base_finetune_on_robotwin_clean_randomized_joint_training
+model_name: pi05_robotwin2
+checkpoint_id: final
+pi0_step: 32
+test_num: 100
+save_failure_json: true
+failure_json_dir: /path/to/workspace/disturb-bench/data/RecoverBench_RoboTwin_JSON_failures
+eval_video_log: true
+eval_video_fps: 10

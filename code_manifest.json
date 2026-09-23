@@ -1,0 +1,197 @@
+[
+  {
+    "path": "overlays/RoboTwin/envs/_base_task.py",
+    "source_sha256": "a5186d9328f98f8d714d1de5af4e761eeba9b86269bed3d05a1b68d90a93d5a8",
+    "release_sha256": "a5186d9328f98f8d714d1de5af4e761eeba9b86269bed3d05a1b68d90a93d5a8"
+  },
+  {
+    "path": "overlays/RoboTwin/envs/put_object_cabinet.py",
+    "source_sha256": "8c95d626f58b36714c684b86519420e52d9089201b88dec6d53f57a7a59a0f16",
+    "release_sha256": "8c95d626f58b36714c684b86519420e52d9089201b88dec6d53f57a7a59a0f16"
+  },
+  {
+    "path": "overlays/RoboTwin/envs/robot/planner.py",
+    "source_sha256": "2173aed03ac29e7783b36f5e3b687b9fd914813af5f0b260e6c6def47c473df7",
+    "release_sha256": "2173aed03ac29e7783b36f5e3b687b9fd914813af5f0b260e6c6def47c473df7"
+  },
+  {
+    "path": "overlays/RoboTwin/envs/robot/robot.py",
+    "source_sha256": "52bd71ef5bf777f3b08ed7f15fffed24384d396132854c9ed1f3fde04124cb29",
+    "release_sha256": "52bd71ef5bf777f3b08ed7f15fffed24384d396132854c9ed1f3fde04124cb29"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/lingbot/__init__.py",
+    "source_sha256": "559dfd499a5fa98c7c1523e45c4d5374cab6b0a3e2010fcd38fda96d149dfaf2",
+    "release_sha256": "559dfd499a5fa98c7c1523e45c4d5374cab6b0a3e2010fcd38fda96d149dfaf2"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/lingbot/deploy_policy.py",
+    "source_sha256": "dd944e7eebc4bf637fc29d5f43d3293cff71e7c3e3e9f9091bd83c68d67124cf",
+    "release_sha256": "a6e846a96605a723d6a306d1db4f1799f84c7d8e552f94a200d257e1ade3da3c"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/pi05/__init__.py",
+    "source_sha256": "559dfd499a5fa98c7c1523e45c4d5374cab6b0a3e2010fcd38fda96d149dfaf2",
+    "release_sha256": "559dfd499a5fa98c7c1523e45c4d5374cab6b0a3e2010fcd38fda96d149dfaf2"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/pi05/deploy_policy.py",
+    "source_sha256": "2bac6f9c77f41281c5e8da49f214631a225bb07c5a5462c8cf14a4353a0ba044",
+    "release_sha256": "2bac6f9c77f41281c5e8da49f214631a225bb07c5a5462c8cf14a4353a0ba044"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/pi05/deploy_policy.yml",
+    "source_sha256": "c5a44283244912306c08919cedd587c7b3c9ccc05ec97bb940ab39e88e4582c9",
+    "release_sha256": "06ae1426b21c812527296a5c94b132880e01d84e18e1dd882e52baf1ecff5f4e"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/pi05/pi_model.py",
+    "source_sha256": "de79205b0ea7dab4c6f346cbd3d47f9c86189072ca66a1250dc6895b60f59608",
+    "release_sha256": "de79205b0ea7dab4c6f346cbd3d47f9c86189072ca66a1250dc6895b60f59608"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/pi05/replay_robotwin_episode.py",
+    "source_sha256": "a02b07336ac1e0a0bd895fdfd35b24fca4d32d5c9fe4fff0a5ff25577cca4627",
+    "release_sha256": "a02b07336ac1e0a0bd895fdfd35b24fca4d32d5c9fe4fff0a5ff25577cca4627"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/pi05/src/openpi/policies/policy_config.py",
+    "source_sha256": "7f951dfd424f7abbfb74b46555479fec82590b9e6b7fac6794097f85b0aa557a",
+    "release_sha256": "7f951dfd424f7abbfb74b46555479fec82590b9e6b7fac6794097f85b0aa557a"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/pi05/src/openpi/training/config.py",
+    "source_sha256": "38068869b8e8eae0852b84fced60519357ca323d066894c62edb0b81e47b0581",
+    "release_sha256": "38068869b8e8eae0852b84fced60519357ca323d066894c62edb0b81e47b0581"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/smolvla/__init__.py",
+    "source_sha256": "559dfd499a5fa98c7c1523e45c4d5374cab6b0a3e2010fcd38fda96d149dfaf2",
+    "release_sha256": "559dfd499a5fa98c7c1523e45c4d5374cab6b0a3e2010fcd38fda96d149dfaf2"
+  },
+  {
+    "path": "overlays/RoboTwin/policy/smolvla/deploy_policy.py",
+    "source_sha256": "03c07e31dc17e104a3f301ae05194c0ab222fcf5f8fa4bad35ee654307d05bef",
+    "release_sha256": "03c07e31dc17e104a3f301ae05194c0ab222fcf5f8fa4bad35ee654307d05bef"
+  },
+  {
+    "path": "overlays/RoboTwin/script/episode_dataset_recorder.py",
+    "source_sha256": "6240acb165315bb048f94ad55fc6201b40802d6373e0967fca8748dde4f4aaf9",
+    "release_sha256": "6240acb165315bb048f94ad55fc6201b40802d6373e0967fca8748dde4f4aaf9"
+  },
+  {
+    "path": "overlays/RoboTwin/script/eval_ood_replay_then_infer.py",
+    "source_sha256": "0f39833de0d49ef878afd09350e80fc86811cfc7e16451ee4b0d100313056414",
+    "release_sha256": "e335523db8ad4a2e06def1180f0e734334dbbd3b873df69d46873e17face700d"
+  },
+  {
+    "path": "overlays/RoboTwin/script/model_rpc.py",
+    "source_sha256": "7ae575df2a44ee6bca9b3c8a4b267ece4371ee1e8d1fe49c0256932b8ef8a982",
+    "release_sha256": "7ae575df2a44ee6bca9b3c8a4b267ece4371ee1e8d1fe49c0256932b8ef8a982"
+  },
+  {
+    "path": "overlays/RoboTwin/script/pi05_model_server_v3.py",
+    "source_sha256": "000b66ef1765cc25a3c61ddfda3bca8e22c153e7d4b4a3d426bff014873d9417",
+    "release_sha256": "000b66ef1765cc25a3c61ddfda3bca8e22c153e7d4b4a3d426bff014873d9417"
+  },
+  {
+    "path": "overlays/RoboTwin/script/replay_robotwin_ood_verify.py",
+    "source_sha256": "447cc1522e7c35da6203cd40a5783babd6031202501ddde165befa86256fc414",
+    "release_sha256": "447cc1522e7c35da6203cd40a5783babd6031202501ddde165befa86256fc414"
+  },
+  {
+    "path": "overlays/RoboTwin/script/replay_robotwin_trace.py",
+    "source_sha256": "647c4743ab553f3c0facf8ff6023fc4f10231bcc907f21c3e2c96ea0918f3d1c",
+    "release_sha256": "647c4743ab553f3c0facf8ff6023fc4f10231bcc907f21c3e2c96ea0918f3d1c"
+  },
+  {
+    "path": "overlays/RoboTwin/script/robotwin_trace_utils.py",
+    "source_sha256": "d2179cc10ab8961c13351a83d74514f36b587db809ab23b1d36f32e42fe90602",
+    "release_sha256": "d2179cc10ab8961c13351a83d74514f36b587db809ab23b1d36f32e42fe90602"
+  },
+  {
+    "path": "overlays/RoboTwin/script/robotwin_video_compare.py",
+    "source_sha256": "a3c0f7048e48fd0bd0a46f0bbd933317f53385dd333cdb9dc7f6a61d6f948e87",
+    "release_sha256": "a3c0f7048e48fd0bd0a46f0bbd933317f53385dd333cdb9dc7f6a61d6f948e87"
+  },
+  {
+    "path": "overlays/X-VLA/evaluation/robotwin-2.0/client.py",
+    "source_sha256": "e9a29d6a78309c1352dc22e870b7e2e838bb1d5680ac0eb8179b8dc5b9da39e8",
+    "release_sha256": "d42f6be066b9d77b0cf10ff204cb78a3b08cd594ecbcfb53dde5888361eab4ef"
+  },
+  {
+    "path": "overlays/X-VLA/evaluation/robotwin-2.0/eval_ood_replay_xvla.py",
+    "source_sha256": "878fa8ebbb94767e0004329fb297bf718fcdf8a705e0418bc9640027ed5d179b",
+    "release_sha256": "644f23a4f6b9ebe76ab4b1f4aef124508669bc70e126cc8dda26e5d01738b054"
+  },
+  {
+    "path": "overlays/lingbot-vla/evaluation/robotwin-2.0/eval_ood_replay_lingbot.py",
+    "source_sha256": "754033307c3d8231121de9587c59c90d6b60a614016e06d8652932c0b470d3bc",
+    "release_sha256": "7c8064ef2fa87c9806c6f5ea62c41a161dc5cdb04da9277c1c8c19e33b43c108"
+  },
+  {
+    "path": "overlays/lerobot/robotwin_ood_eval/eval_ood_replay_smolvla.py",
+    "source_sha256": "f415038f78f2d315c8865ee433f4c627219bc71e33185ed0c417b8ba41c1c0a5",
+    "release_sha256": "1cb88541f3f70e27bedc060e6b206289d5c8b0b80856c34108dee5de0ed2bc3a"
+  },
+  {
+    "path": "overlays/lerobot/robotwin_ood_eval/smolvla_model_server.py",
+    "source_sha256": "1dff89903fee428375159c7e5cce6e2df80236729be4e16608c664f858da3cd8",
+    "release_sha256": "963da18a9159a8db791262515ba1ea7443c4cccac7ad6778cfecc4acfb3b0550"
+  },
+  {
+    "path": "overlays/openpi/examples/libero/eval_filtered_repro.py",
+    "source_sha256": "db46c5661e02ee13064172b8a604e092242d14241b7770ceff43c83a6460c115",
+    "release_sha256": "3e1cd54025389f4fb2b3e60c9bceb7e3ecafaddfc0e8ac4092f1e0313d14c9b1"
+  },
+  {
+    "path": "overlays/unifolm-vla/experiments/LIBERO/eval_filtered_repro_unifolm.py",
+    "source_sha256": "af4e2d8570645ac34bd78ac0ede9252842932b46c96a9966a7bd6dbcced0acc3",
+    "release_sha256": "af4e2d8570645ac34bd78ac0ede9252842932b46c96a9966a7bd6dbcced0acc3"
+  },
+  {
+    "path": "overlays/unifolm-vla/experiments/LIBERO/rlds_writer_for_eval.py",
+    "source_sha256": "fd87bbd2f87e3bf1e171e74f19dbd41a7bc90c3f829b21a992e21dca6e2d5249",
+    "release_sha256": "863a7ac54ac89983972cfe68def22a6ebe6294b360a12986a9079c2e7cf3ad0d"
+  },
+  {
+    "path": "overlays/Being-H/BeingH/benchmark/libero/eval_filtered_repro_beingh.py",
+    "source_sha256": "0ad565d59d70c2d2ba9e633354acd5dbdb5abddd0a2751416f950c442f63c6a9",
+    "release_sha256": "0ad565d59d70c2d2ba9e633354acd5dbdb5abddd0a2751416f950c442f63c6a9"
+  },
+  {
+    "path": "overlays/FastWAM/configs/sim_libero.yaml",
+    "source_sha256": "b289183062ce3d2f0555745169e29c2ad739e4e4425e016524a4df761f99721d",
+    "release_sha256": "b289183062ce3d2f0555745169e29c2ad739e4e4425e016524a4df761f99721d"
+  },
+  {
+    "path": "overlays/FastWAM/experiments/libero/eval_filtered_repro_fastwam.py",
+    "source_sha256": "5612a3ec0cf9d6013ef78fb0358a4d0650e06565672d346b93ad9a6de7fdafa6",
+    "release_sha256": "5612a3ec0cf9d6013ef78fb0358a4d0650e06565672d346b93ad9a6de7fdafa6"
+  },
+  {
+    "path": "overlays/cosmos-policy/cosmos_policy/_src/predict2/__init__.py",
+    "source_sha256": "057225c89d8aa03a0fb960c3cacf61e46897ec858de905d506ec1d087becb46a",
+    "release_sha256": "057225c89d8aa03a0fb960c3cacf61e46897ec858de905d506ec1d087becb46a"
+  },
+  {
+    "path": "overlays/cosmos-policy/cosmos_policy/_src/predict2/models/utils.py",
+    "source_sha256": "cdf37b42aecc2328a914edd2373f391b64c8fd41a3ed5c597293e6fc5aef7fa1",
+    "release_sha256": "cdf37b42aecc2328a914edd2373f391b64c8fd41a3ed5c597293e6fc5aef7fa1"
+  },
+  {
+    "path": "overlays/cosmos-policy/cosmos_policy/experiments/robot/cosmos_utils.py",
+    "source_sha256": "70a560ee565c328076543a87ef8c37cd679aef8048768fafe7aa9b9c27cb0afe",
+    "release_sha256": "70a560ee565c328076543a87ef8c37cd679aef8048768fafe7aa9b9c27cb0afe"
+  },
+  {
+    "path": "overlays/cosmos-policy/cosmos_policy/experiments/robot/libero/libero_utils.py",
+    "source_sha256": "4eb219d751c26b0a6f035c7f7e429dacbac3a4afaa1621a89c31c8f69f2d88ae",
+    "release_sha256": "4eb219d751c26b0a6f035c7f7e429dacbac3a4afaa1621a89c31c8f69f2d88ae"
+  },
+  {
+    "path": "overlays/cosmos-policy/cosmos_policy/experiments/robot/libero/run_libero_filtered_repro.py",
+    "source_sha256": "10f13eaaa800e157a2c1db93365b6d53e2f2df570168fd6c9ba7294ad353ecb2",
+    "release_sha256": "10f13eaaa800e157a2c1db93365b6d53e2f2df570168fd6c9ba7294ad353ecb2"
+  }
+]
