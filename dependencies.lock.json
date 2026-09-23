@@ -25,8 +25,8 @@
     "historical_revision_verified": false
   },
   "unifolm-vla": {
-    "url": null,
-    "revision": null,
+    "url": "https://github.com/unitreerobotics/unifolm-vla.git",
+    "revision": "ff6c39aeb0454cfb95418c66aef40ca777f935c1",
     "historical_revision_verified": false
   },
   "LIBERO": {
