@@ -2,7 +2,7 @@
 
 [Back to README](../README.md)
 
-This guide covers the four included recovery adapters: **Pi0.5, X-VLA, LingBot-VLA and SmolVLA**. Complete data preparation and install the `RoboTwin` overlay plus the selected model overlay first. Export `PROJECTS`, `ROBORECOVER_ROOT`, `ROBORECOVER_DATA`, and `ROBORECOVER_RUNS` in each terminal.
+This guide covers four included recovery adapters: **Pi0.5, X-VLA, LingBot-VLA and SmolVLA**. It also records the required environment/checkpoint configuration for **FastWAM and LingBot-VA**, whose RoboRecover recovery entrypoints will be added later. Complete data preparation and install the `RoboTwin` overlay plus a currently available model overlay first. Export `PROJECTS`, `ROBORECOVER_ROOT`, `ROBORECOVER_DATA`, and `ROBORECOVER_RUNS` in each terminal.
 
 ## 1. Prepare RoboTwin
 
@@ -244,7 +244,56 @@ python script/eval_ood_replay_then_infer.py \
 
 These commands require compatible weights supplied by the user; they do not download or create a RoboTwin checkpoint.
 
-## 7. Repeated trials and output inspection
+## 7. FastWAM configuration (adapter pending)
+
+> **Status:** the original FastWAM RoboTwin environment and checkpoint are public, but this repository does not yet include a RoboRecover prefix-replay evaluator for it. Do not use FastWAM's clean-start manager as if it were a recovery score.
+
+Follow the official [FastWAM environment, model preparation and RoboTwin instructions](https://github.com/yuantianyuan01/FastWAM). The model environment uses Python 3.10 and the upstream release installs PyTorch 2.7.1 / torchvision 0.22.1 with CUDA 12.8:
+
+```bash
+conda create -n fastwam python=3.10 -y
+conda activate fastwam
+export FASTWAM_ROOT="$PROJECTS/FastWAM"
+cd "$FASTWAM_ROOT"
+python -m pip install 'torch==2.7.1+cu128' 'torchvision==0.22.1+cu128' \
+  --extra-index-url https://download.pytorch.org/whl/cu128
+python -m pip install -e .
+export DIFFSYNTH_MODEL_BASE_PATH="$FASTWAM_ROOT/checkpoints"
+python scripts/preprocess_action_dit_backbone.py \
+  --model-config configs/model/fastwam.yaml \
+  --output checkpoints/ActionDiT_linear_interp_Wan22_alphascale_1024hdim.pt \
+  --device cuda --dtype bfloat16
+```
+
+Download both `robotwin_uncond_3cam_384.pt` and `robotwin_uncond_3cam_384_dataset_stats.json` from the [official FastWAM model release](https://huggingface.co/yuanty/fastwam). Keep the pair together and configure the upstream task as `robotwin_uncond_3cam_384_1e-4`; weights, dataset statistics and task config must match. The original model also requires its Wan/DiffSynth resources prepared by the upstream **Model Preparation** steps.
+
+FastWAM ships a separate `third_party/RoboTwin` integration and a clean evaluation manager. RoboRecover's forthcoming adapter must instead consume `ROBOTWIN_INPUT`, replay each stored prefix, preserve the original instruction and reset model history before fresh inference. Until that code is committed, this section prepares dependencies only; it is intentionally not followed by a benchmark command.
+
+## 8. LingBot-VA configuration (adapter pending)
+
+> **Status:** model and original RoboTwin deployment are public, but the RoboRecover recovery evaluator is not yet included. The commands below prepare the upstream inference stack only.
+
+Use [robbyant/lingbot-va](https://github.com/robbyant/lingbot-va) and [robbyant/lingbot-va-posttrain-robotwin](https://huggingface.co/robbyant/lingbot-va-posttrain-robotwin). The original stack requires Python 3.10.16, PyTorch 2.9.0 and CUDA 12.6:
+
+```bash
+conda create -n lingbot-va python=3.10.16 -y
+conda activate lingbot-va
+export LINGBOT_VA_ROOT="$PROJECTS/lingbot-va"
+cd "$LINGBOT_VA_ROOT"
+python -m pip install torch==2.9.0 torchvision==0.24.0 torchaudio==2.9.0 \
+  --index-url https://download.pytorch.org/whl/cu126
+python -m pip install websockets einops diffusers==0.36.0 transformers==4.55.2 \
+  accelerate msgpack opencv-python matplotlib ftfy easydict
+python -m pip install flash-attn --no-build-isolation
+```
+
+For inference, edit `<checkpoint>/transformer/config.json` and set `"attn_mode"` to `"torch"` or `"flashattn"`; the training-only `"flex"` value will fail during evaluation. Preserve the checkpoint's normalization/config files. The upstream policy is an end-effector controller: RoboTwin uses the 16-channel order `[left xyz+quaternion, left gripper, right xyz+quaternion, right gripper]`, three cameras in the trained order, and cuRobo IK. Do not reinterpret it as joint-space output.
+
+An alternative is the current [LeRobot LingBot-VA integration](https://huggingface.co/docs/lerobot/main/lingbot_va) with checkpoint `lerobot/lingbot_va_robotwin`. That integration documents `pip install -e ".[lingbot_va]"`, `batch_size=1`, `action_mode=ee`, and roughly 18–24 GB VRAM. It is a separate runtime path; do not mix its converted checkpoint/configuration with the original server implementation unless the future adapter explicitly targets it.
+
+The forthcoming recovery adapter must preserve LingBot-VA's per-episode KV-cache semantics: reset between scenarios, replay the stored environment prefix without feeding it as generated policy history unless the specified adapter protocol says so, then start fresh policy inference. Until that implementation is published, do not report upstream clean-start `lerobot-eval` or RoboTwin results as RoboRecover recovery results.
+
+## 9. Repeated trials and output inspection
 
 Run one policy on one GPU/server first. For repetitions, change **both** `--repeat-idx` and `--run-name` for each complete pass, for example `1/test_r1`, `2/test_r2`, `3/test_r3`. Keep simulation initialization fixed to the scenario and record any model sampling-seed changes separately. Do not run different clients against one stateful server concurrently unless its isolation behavior has been validated.
 

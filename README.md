@@ -9,14 +9,14 @@ RoboRecover provides recovery starting points and evaluation adapters for **LIBE
 | Benchmark | Train / test starting points | Policy adapters |
 |---|---|---|
 | LIBERO | 800 / 200 | Pi0, Pi0.5, Being-H0.5, UniFOLM-VLA, FastWAM, Cosmos-Policy |
-| RoboTwin 2.0 | 800 / 200 | Pi0.5, X-VLA, LingBot-VLA, SmolVLA |
+| RoboTwin 2.0 | 800 / 200 | Pi0.5, X-VLA, LingBot-VLA, SmolVLA; FastWAM and LingBot-VA configuration documented, recovery adapters pending |
 
 - Fixed splits with per-file SHA256 checksums.
 - Replay-then-inference evaluators using each policy's original implementation.
 - Tools for installing evaluation extensions and validating data.
 - One example JSON per benchmark.
 
-**Dataset download:** the complete scenario archive is being prepared for Hugging Face. Until its link is published, full evaluation requires the exported archive from the authors. Model weights and simulator assets are obtained separately. RoboTwin FastWAM and LingBot-VA are not included. The train split contains starting points, not complete policy-training demonstrations.
+**Dataset download:** the complete scenario archive is being prepared for Hugging Face. Until its link is published, full evaluation requires the exported archive from the authors. Model weights and simulator assets are obtained separately. RoboTwin FastWAM and LingBot-VA environment/configuration guidance is included, but their RoboRecover recovery entrypoints will be added later. The train split contains starting points, not complete policy-training demonstrations.
 
 ## Quick navigation
 
@@ -24,7 +24,7 @@ RoboRecover provides recovery starting points and evaluation adapters for **LIBE
 2. [Install the evaluation extensions](#2-install-the-evaluation-extensions)
 3. [Prepare the data](#3-prepare-the-data)
 4. [LIBERO: all six policies](docs/LIBERO.md)
-5. [RoboTwin: all four policies](docs/ROBOTWIN.md)
+5. [RoboTwin: four adapters + two pending configurations](docs/ROBOTWIN.md)
 6. [Results and protocol](#5-results-and-protocol)
 
 ## 1. Environment setup
@@ -50,6 +50,7 @@ Install the **original benchmark and model environments first**, then add RoboRe
 | X-VLA | [Installation](https://github.com/2toinf/X-VLA), [RoboTwin deployment](https://github.com/2toinf/X-VLA/tree/main/evaluation/robotwin-2.0) | [X-VLA-RoboTwin2](https://huggingface.co/2toINF/X-VLA-RoboTwin2) |
 | LingBot-VLA | [Installation and RoboTwin guide](https://github.com/Robbyant/lingbot-vla) | [RoboTwin post-trained weights](https://huggingface.co/robbyant/lingbot-vla-4b-posttrain-robotwin), [Qwen2.5-VL](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct) |
 | SmolVLA | [LeRobot SmolVLA guide](https://huggingface.co/docs/lerobot/smolvla) | [Base model](https://huggingface.co/lerobot/smolvla_base); provide your **RoboTwin-finetuned** checkpoint and processor/statistics files |
+| LingBot-VA | [Official repository and RoboTwin setup](https://github.com/robbyant/lingbot-va) | [RoboTwin post-trained weights](https://huggingface.co/robbyant/lingbot-va-posttrain-robotwin); alternatively [LeRobot-format checkpoint/config guide](https://huggingface.co/docs/lerobot/main/lingbot_va) |
 
 Follow the checked-out revision's instructions: upstream `main` may have changed its layout. In particular, the Being-H adapter targets the pinned `BeingH/` layout, not the current reorganized repository. Base revisions are in [dependencies.lock.json](dependencies.lock.json).
 
@@ -126,7 +127,7 @@ The tool validates membership, hashes and actions before writing input lists. Re
 ## 4. Evaluate a policy
 
 - **[LIBERO tutorial](docs/LIBERO.md):** original environments, checkpoints, server/client commands for Pi0/Pi0.5 and Being-H, in-process commands for UniFOLM/FastWAM/Cosmos, smoke tests and repeated trials.
-- **[RoboTwin tutorial](docs/ROBOTWIN.md):** simulator setup, replay check, separate model servers and evaluation commands for all four adapters.
+- **[RoboTwin tutorial](docs/ROBOTWIN.md):** simulator setup, replay check, four runnable adapters, plus environment and checkpoint configuration for pending FastWAM/LingBot-VA adapters.
 
 Start with one scenario. Use our recovery entrypoint, not an upstream clean-start benchmark script. Model ports are not interchangeable: HTTP, WebSocket and custom RPC clients need their matching server.
 
